@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-18T21:47:11 GMT+07:00" name="Default suite" finished-at="2023-07-18T21:47:22 GMT+07:00" duration-ms="10792">
+    <test started-at="2023-07-18T21:47:11 GMT+07:00" name="Default test" finished-at="2023-07-18T21:47:22 GMT+07:00" duration-ms="10792">
+       <parameter name="browser" value="chrome"></parameter>
+      <class name="hoantest.SearchFlights_Day16">
+        <test-method is-config="true" signature="openSystemUnderTest()[pri:0, instance:hoantest.SearchFlights_Day16@2dc54ad4]" started-at="2023-07-18T21:47:11 GMT+07:00" name="openSystemUnderTest" finished-at="2023-07-18T21:47:21 GMT+07:00" duration-ms="10382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openSystemUnderTest -->
+        <test-method signature="ChooseDatePicker()[pri:0, instance:hoantest.SearchFlights_Day16@2dc54ad4]" started-at="2023-07-18T21:47:21 GMT+07:00" name="ChooseDatePicker" finished-at="2023-07-18T21:47:22 GMT+07:00" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChooseDatePicker -->
+        <test-method is-config="true" signature="closeBrowserTest()[pri:0, instance:hoantest.SearchFlights_Day16@2dc54ad4]" started-at="2023-07-18T21:47:22 GMT+07:00" name="closeBrowserTest" finished-at="2023-07-18T21:47:22 GMT+07:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserTest -->
+      </class> <!-- hoantest.SearchFlights_Day16 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
