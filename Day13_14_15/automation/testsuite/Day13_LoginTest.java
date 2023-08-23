@@ -52,7 +52,6 @@ public class Day13_LoginTest extends CommonBase{
 	    WebElement expectfield = driver.findElement(page.authenFail);
 	    assertTrue(expectfield.isDisplayed());
 	};
-	//Log out chay rieng 1 case thi pass, chay chung voi cac case login thi chi bi fail
 	@Test
 	public void logoutSuccessfuly() {
 		LoginPage page = new LoginPage(driver);
@@ -64,9 +63,6 @@ public class Day13_LoginTest extends CommonBase{
 	    expectfield = driver.findElement(page.titleSignIn);
 	    assertTrue(expectfield.isDisplayed());
 	};
-	//Chi chua close duoc Browser cho moi lan test
-	//Open page slowly, chi phai set timeout 20s neu chay case rieng, 
-	//timeout 60s de chay chung cac case la co binh thuong khong?
 	@AfterMethod
 	public void closeBrowserTest() {
 		 quitDriver(driver);
