@@ -3,7 +3,9 @@ package automation.testsuite;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -12,8 +14,8 @@ import automation.constant.AccountConstant;
 import automation.pagelocator.DashboardPage;
 import automation.pagelocator.LoginPage;
 
-public class LoginTest extends CommonBase{
-	@BeforeTest
+public class Day13_LoginTest extends CommonBase{
+	@BeforeMethod
 	public void openPage() {
 		driver = initChromeDriver(AccountConstant.webURL);
 	}
@@ -63,9 +65,9 @@ public class LoginTest extends CommonBase{
 	    assertTrue(expectfield.isDisplayed());
 	};
 	//Chi chua close duoc Browser cho moi lan test
-	//Trang mo rat cham, chi phai set timeout 20s neu chay case rieng, 
+	//Open page slowly, chi phai set timeout 20s neu chay case rieng, 
 	//timeout 60s de chay chung cac case la co binh thuong khong?
-	@AfterTest
+	@AfterMethod
 	public void closeBrowserTest() {
 		 quitDriver(driver);
 	}

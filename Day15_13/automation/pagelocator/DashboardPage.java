@@ -5,9 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class DashboardPage {
-	public By dashBoardTest =By.xpath("//*[text()='Dashboard']");
+	public static By dashBoardTest =By.xpath("//*[text()='Dashboard']");
 	private By userName = By.xpath("//span[@class='user-name ml10']");
 	private By signOut = By.xpath("//a[text()=' Sign Out']");
+	public By clientLink = By.xpath("//span[text()='Clients']");
 	private WebDriver driver;
 	public DashboardPage(WebDriver _driver) {
 		this.driver = _driver;

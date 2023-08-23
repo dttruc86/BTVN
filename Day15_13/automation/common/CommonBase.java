@@ -30,7 +30,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
  */
 public class CommonBase {
 	public static WebDriver driver;	
-	public int initWaitTime = 60;
+	public int initWaitTime = 120;
 	public WebDriver initChromeDriver(String URL)
 	{
 		ChromeOptions options = new ChromeOptions();
@@ -38,7 +38,7 @@ public class CommonBase {
 		System.getProperty("user.dir") + "\\driver\\chromedriver.exe");		
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(120));
 		driver.get(URL);
 		return driver;
 	}
@@ -147,7 +147,7 @@ public class CommonBase {
 		} else {
 			dr.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS); 
 			dr.manage().deleteAllCookies();
-			dr.close();
+			driver.close();
 		}
 	}
 	

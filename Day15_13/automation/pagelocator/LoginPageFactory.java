@@ -1,11 +1,10 @@
 package automation.pagelocator;
 
-import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
 
 public class LoginPageFactory {
 	@FindBy(id="email")
@@ -16,12 +15,13 @@ public class LoginPageFactory {
 	
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement btnLogin;
+	
 	private WebDriver driver;
-	public LoginPageFactory(WebDriver _driver) {
-		this.driver = _driver;
+	public LoginPageFactory(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void LoginFunction(String email, String password) {
+	public void LoginFunctionFactory(String email, String password) {
 		txtemail.clear();
 		txtemail.sendKeys(email);
 		txtpassword.clear();
@@ -29,6 +29,10 @@ public class LoginPageFactory {
 		btnLogin.click();
 	}
 	
-	
+	@AfterTest
+	public void closeDriver()
+	{
+		driver.close();
+	}
 	
 }
