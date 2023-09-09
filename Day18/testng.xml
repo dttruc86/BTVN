@@ -1,0 +1,21 @@
+   
+
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite Hoan" verbose="1">
+    <test name="Regression test with firfox brower">
+        <parameter name="testNGBrowser" value="Firefox"></parameter>
+        <classes>
+           <class name="automation.testsuite.LoginTestFactory"/>
+        </classes>
+    </test>
+    <test name="Regression test with chrome browser">
+        <parameter name="testNGBrowser" value="Chrome"></parameter>
+        <classes>
+          <class name="automation.testsuite.LoginTestFactory"/>
+        </classes>
+    </test>    
+     
+</suite>
+
+
